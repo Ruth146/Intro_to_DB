@@ -1,5 +1,5 @@
 -- TASK_4.SQL
--- PRINT FULL DESCRIPTION OF THE TABLE Books
+-- PRINT FULL DESCRIPTION OF THE TABLE Books IN alx_book_store DATABASE
 
 SELECT 
     COLUMN_NAME AS "Column Name",
@@ -11,7 +11,7 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.COLUMNS
 WHERE 
-    TABLE_SCHEMA = DATABASE() -- uses the current database passed as argument
+    TABLE_SCHEMA = 'alx_book_store'  -- explicitly specify the database
     AND TABLE_NAME = 'Books'
 ORDER BY 
     ORDINAL_POSITION;
